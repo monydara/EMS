@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  abbr: MyString
+  name: MyString
+  course_type: MyString
+  program_type: MyString
+  credit: 1
+  is_deleted: false
+
+two:
+  code: MyString
+  abbr: MyString
+  name: MyString
+  course_type: MyString
+  program_type: MyString
+  credit: 1
+  is_deleted: false

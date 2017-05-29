@@ -1,0 +1,2 @@
+module GenNationalitiesHelper
+end

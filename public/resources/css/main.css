@@ -1,0 +1,212 @@
+
+.iconImage{
+    margin: 50px 80px 20px 80px !important;
+    width : 128px;
+    cursor: pointer;
+    height: 128px;
+    display: inline-block !important;
+}
+.imageSize{
+    width:128px !important;
+    height:128px !important;
+}
+
+.iconImageMid{
+    margin: 50px 80px 20px 80px !important;
+    width : 64px;
+    cursor: pointer;
+    height: 64px;
+    display: inline-block !important;
+}
+.iconImageSmall{
+    margin: 50px 80px 20px 80px !important;
+    width : 32px;
+    cursor: pointer;
+    height: 32px;
+    display: inline-block !important;
+}
+.imageSizeMid{
+    width:64px !important;
+    height:64px !important;
+}
+.imageSizeSmall{
+    width:32px !important;
+    height:32px !important;
+}
+
+
+/* dara custom some class */
+
+.displayField{
+	color:white;
+	background-color:#9AC1CE;
+	text-align:right;
+	font-weight:bold;
+}
+.valueField{
+	color:black;
+	background-color:white;
+	text-align:center;
+	font-weight:bold;	
+}
+.display-false { 
+	display: none 
+}
+.expire{
+	    background-color: red;
+    	color:red;
+}
+.need-approve{
+    background-color: rgb(52, 59, 223);
+    color:rgb(52, 59, 223);
+  
+}
+
+.diplay-label{
+	padding:8px;
+	font-weight:bold;
+	font-size:14;
+	color:white;
+	background-color:#5282B6
+}
+
+input[type="text"],textarea{
+	font-family:arial,sans-serif!important;
+	
+}
+input[type="text"]:focus {
+    border: 1px solid #07c;
+    box-shadow: 0 0 3px #07c;
+}
+textarea:focus {
+    border: 1px solid #07c;
+    box-shadow: 0 0 3px #07c;
+}
+
+
+.topbar{
+	background: #990000;
+	border-bottom: solid 2px #EEE;
+	padding: 3px 0;
+	text-align: center;
+	font-weight:bold;
+	
+	color:white;
+}
+
+/* Login form */
+.form-login-icon-title {
+    background-image: url("../images/icons/small/locked.png")
+}
+
+.form-login-header {
+    background: transparent url("../images/icons/large/lock.png") no-repeat 97% 50%;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 45px 10px 10px;
+}
+
+.form-login-header .error {
+    color: red;
+}
+
+.form-login-icon-login {
+    background-image: url("../images/icons/medium/login.png")
+}
+
+.form-login-icon-cancel {
+    background-image: url("../images/icons/medium/close.png")
+}
+
+.form-login-warning {
+    background: url("../images/icons/small/warning.png") no-repeat center left;
+    padding: 2px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+.expand {
+    background-image: url('../images/icons/small/expand.png') !important;
+}
+
+.collapse {
+    background-image: url('../images/icons/small/collapse.png') !important;
+}
+
+.datalink div{
+   text-decoration: underline;
+    cursor: pointer;
+}
+
+.logout {
+    background-image: url('../images/icons/small/logout.png') !important;
+}
+
+
+/*Add by Sophea*/
+.borderpanel{
+	 border-left:1px solid blue;
+	 padding-left:10px;
+}
+.new-bg .x-grid-cell { 
+    background-color: #FFF; 
+    color: black; 
+} 
+ 
+.deposited-bg .x-grid-cell { 
+    background-color: #F0A13C; 
+    color: black; 
+	
+}
+.sold-bg .x-grid-cell { 
+    background-color: gray; 
+    color:white;
+}	
+.readytosell-bg .x-grid-cell { 
+    background-color:  #72B835; 
+    color:black; 
+}
+.bg-new{
+	
+	background-color:#FFF;
+}
+
+.bg-readytosell{
+	
+	background-color:#72B835;
+}
+.bg-sold{
+	
+	background-color: gray;
+}
+.bg-deposited{
+	
+	background-color:#F0A13C;
+}	
+	
+/*
+	action row color for Credit Monitor
+**/	
+	
+.reminding .x-grid-cell { 
+    background-color: #FCFC64; 
+    color: #0A0A0A; 
+} 
+ 
+.warning .x-grid-cell { 
+    background-color: #DBBE23; 
+    color: #0A0A0A; 
+	
+}
+.ontimepayment .x-grid-cell { 
+    background-color: #7EF54C; 
+    color: #0A0A0A;
+}	
+.panalty .x-grid-cell { 
+    background-color: #FC001E; 
+    color: #0A0A0A; 
+	}
+	
+	

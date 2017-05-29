@@ -1,0 +1,2 @@
+module AccTaxTypeHelper
+end

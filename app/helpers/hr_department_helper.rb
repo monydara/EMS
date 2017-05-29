@@ -1,0 +1,2 @@
+module HrDepartmentHelper
+end

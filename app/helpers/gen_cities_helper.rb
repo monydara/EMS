@@ -1,0 +1,2 @@
+module GenCitiesHelper
+end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gen_city_id: 1
+  district: MyString
+
+two:
+  gen_city_id: 1
+  district: MyString

@@ -1,0 +1,2 @@
+module AccFeeCatDetailWuHelper
+end

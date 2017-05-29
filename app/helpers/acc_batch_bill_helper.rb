@@ -1,0 +1,2 @@
+module AccBatchBillHelper
+end

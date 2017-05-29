@@ -1,0 +1,2 @@
+module AcdBatchsHelper
+end

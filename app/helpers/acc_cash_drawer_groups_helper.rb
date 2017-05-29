@@ -1,0 +1,2 @@
+module AccCashDrawerGroupsHelper
+end

@@ -1,0 +1,2 @@
+module AccCurrencyHelper
+end

@@ -1,0 +1,2 @@
+module AccCashDrawerTransHelper
+end

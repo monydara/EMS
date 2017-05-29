@@ -1,0 +1,121 @@
+<html>
+<header>
+	<style >
+		.border{
+			border-collapse: collapse;
+		}
+		.border th,.border td{
+		    border: 1px solid black;
+		    padding:2px;
+		}
+		.border th{
+			background-color:silver;
+		}
+		@media print {
+		    footer {page-break-after: always;}
+		}
+	</style>
+</header>
+	<body>
+	<% @invoice_list.each do |invoice| %>
+		<% student = invoice.acc_account_master.sdn_student %>
+		<table width="100%" style="margin-top:200px">
+	<col width="100px"></col>
+	<col ></col>
+	<col width="100px"></col>
+	<col width="100px"></col>
+		<tr>
+			<td>
+				Name
+			</td>
+			<td>
+				: <%= "#{student.first_name} #{student.last_name}"  %>
+			</td>
+			<td>
+				Invoice No
+			</td>
+			<td>
+				: <%= invoice.invoice_no %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Sex
+			</td>
+			<td>
+				: <%= student.gender %>
+			</td>
+			<td>
+				Date
+			</td>
+			<td>
+				: <%= invoice.issue_date %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ID
+			</td>
+			<td>
+				: <%= student.student_no %>
+			</td>
+			<td>
+				Due Date
+			</td>
+			<td>
+				: <%= invoice.due_date %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Skill
+			</td>
+			<td>
+				: <%= invoice.acd_course_faculty.name %>
+			</td>
+			
+		</tr>
+	</table>
+<br>
+
+	<table class="border" style="width:100%">
+	<colgroup width="50px"></colgroup>
+	<colgroup ></colgroup>
+	<colgroup width="100px"></colgroup>
+	<colgroup width="100px"></colgroup>
+	<% i = 0 %><% total_amount = 0 %>
+		<tr>
+			<th>No</th>
+			<th>Description</th>
+			<th colspan="2">Amount</th>
+		</tr>
+	<% invoice.acc_invoice_details.each do |d| %>
+		<tr>
+			<td><center><%= i=i+1 %></center></td>
+			<td><%= d.description %></td>
+			<td colspan="2" style="text-align:right"><%= number_to_currency d.amount %></td>
+		</tr>
+		<% total_amount=total_amount+ d.amount %>
+		<% end %>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+			<td>Balance</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+			<td>Total Amount</td>
+			<td style="text-align:right"><%= number_to_currency total_amount %></td>
+		</tr>
+	</table>
+	<footer></footer>
+	<% end	%>
+
+
+	
+	</body>
+	<script>
+		window.print();
+	</script>
+</html>

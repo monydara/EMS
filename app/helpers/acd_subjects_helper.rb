@@ -1,0 +1,2 @@
+module AcdSubjectsHelper
+end

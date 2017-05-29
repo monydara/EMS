@@ -1,0 +1,30 @@
+Ext.define('ExtDesktop.model.acc.FinanceTranReceiptM', {
+    extend: 'Ext.data.Model',
+    fields: [
+		"id",		
+		"receipt_no",
+		"acc_tran_type_id",
+		"acc_reason_type_id",
+		"acc_cash_drawer_tran_id",
+		"acc_payment_method_id",
+		"ref_no",
+		"tran_date",		
+		"amount_usd",
+		"amount_khr",
+		"commited_date",		
+		"rollback_date",
+		"tranRemark",
+		"receipt_date",		
+		"acc_charge_item_type_id",
+		"payer_name",
+		"reference_no",
+		"usd_amount",
+		"khr_amount",
+		"remark",
+		"is_paid",
+		"paid_date",		
+		"is_del",
+		"receipt_by_id",
+		"campus_id"
+		]
+});

@@ -1,0 +1,34 @@
+
+ ✔ Task Start @done (15-09-27 15:14)
+1- tc/WU  admission
+    ✔ add admission no on grid column information @done (15-09-28 21:20)
+    ☐ course and degree and status(in active)/ cannot the same in admission  .
+    ✔ add student id to grid registration @done (15-09-28 21:36)
+    ✔ Save and Save Close not work . @done (15-09-28 21:48)
+
+ 2- WU Admission
+   ☐ add button upgrade(degree)
+      in form transfer
+      ☐ add level column to table degree , add column reference no to admission WU
+      ✔ add reference admission no(require) @done (15-10-02 23:18)
+      ☐ check level of degree ( if admission asssociate can upgrade to bachelor only ).
+   ✔ Admission code format (BatchAbbr-DegreeAbbr001) @done (15-09-28 22:11)
+   ✔ remove tuition time in student WU form @done (15-09-30 15:11)
+   ✔ Check on copy funtion ... @done (15-10-17 14:37)
+
+  3-Student detail
+    ✔ in student detail add admission number and reference number to field admission detail grid . @done (15-09-30 16:09)
+
+   4-Class Enrollment
+     ☐ Tc / Filter student in course of course class only
+     ☐ add button (save) and (save and close)
+     ☐ list class with status started only .
+
+    5-Transfer student WU
+      ✔  add student information @done (15-10-03 00:24)
+        ✔ name @done (15-10-03 12:39)
+        ✔ dob @done (15-10-03 12:39)
+        ✔ gender @done (15-10-03 12:39)
+        ✔ student id @done (15-10-03 12:39)
+      ✔ acadimic information re-write @done (15-10-03 00:24)
+      ☐ degree auto select

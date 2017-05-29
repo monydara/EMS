@@ -1,0 +1,2 @@
+module CfgClassRoomsHelper
+end

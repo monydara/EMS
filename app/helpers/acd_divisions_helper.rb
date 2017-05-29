@@ -1,0 +1,2 @@
+module AcdDivisionsHelper
+end

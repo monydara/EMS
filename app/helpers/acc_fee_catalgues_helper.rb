@@ -1,0 +1,2 @@
+module AccFeeCatalguesHelper
+end

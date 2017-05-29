@@ -1,0 +1,63 @@
+
+Ext.define('ExtDesktop.model.sdn.Student', {
+    extend: 'Ext.data.Model',
+    fields: [
+		"id",
+		"lead_id",
+		"category_id",
+		"title_id",
+		"student_code",
+		"student_no",
+		"first_name",
+		"last_name",
+		"khr_first_name",
+		"khr_last_name",
+		"gender",
+		"date_of_birth",
+		"registered_date",
+		"place_of_birth",
+		"phone_no",
+		"email",
+		"address",
+		"from_city_id",
+		"occupation_id",
+		"national_id",
+		"religion_id",
+		"langauge_id",
+		"ethnicity_id",
+		"national_no",
+		"passport_no",
+		"note",
+		"image_url",
+		"handler",
+		"campus_id",
+		"created_at",
+		"updated_at",
+		"status",
+		"record_stat",
+		//===
+		"city_name",
+
+		// khr 
+		"student_id",
+		"gender_khr",
+		"date_of_birth_khr",
+		"place_of_birth",
+		"address_khr",
+
+		"phone",
+		"diploma_year",
+		"diploma_grade",
+		"total_score",
+		"is_passed_diploma",
+		"diploma_num",
+		"certificate",
+		"institue",
+		"institue_city",
+		"city",
+		"father_name",
+		"mother_name",
+		"occupation"
+
+    ]
+});

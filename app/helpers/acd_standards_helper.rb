@@ -1,0 +1,2 @@
+module AcdStandardsHelper
+end

@@ -1,0 +1,2 @@
+module CfgLangaugesHelper
+end

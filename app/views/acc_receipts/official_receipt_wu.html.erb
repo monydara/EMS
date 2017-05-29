@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    .fix{
+        position: fixed;
+    }
+    .inline{
+        display: inline-block;
+    }
+    .border{
+        border:1px solid black;
+    }
+    .row{
+        margin-left: 20px;
+    }
+    .row div{
+        margin-bottom:15px;
+
+        font-size:20px;
+    }
+    .bold{
+        font-weight:bold;
+    }
+    </style>
+</head>
+<body style="font-size: 17px;">
+<div style="height:600px;width:100%; display:inline-block;">
+
+<!-- header -->
+    <div>
+        <div class="fix"  style="width:400px">
+            <div class="fix" style="">
+            <% if request.env["REQUEST_PATH"] && request.env["REQUEST_PATH"].include?(".pdf") %>
+                      <img src= "<%= Rails.root %>/public/resources/images/icons/logo.png" style="width: 100px;height:120px" />
+                     <% end %>
+               <!--  <img src="/images/icons/logo" width="100px" height="100px"> -->
+            </div>
+            <div class="fix" style="left:120px; font-family: serif;">
+               <b> មជ្ឈមណ្ឌលបណ្ដូះបណ្ដាលវេស្ទើន<br>
+                WESTERN TRAINING CENTER</b>
+            </div>
+        </div>
+        <div class="fix" style="border: 1px solid black; right: 195px;  padding:5px ">
+            ប្រាក់បង់រូចមិនអាចបង់វិញបាន <br>
+            <b>Nonrefundable</b>
+        </div>
+        <div class="border fix" style="border-radius:5px; right:0px; padding:10px">
+            No.: OR  0001223 <br>
+            Date: 12 / 12 / 2015
+        </div>
+        <div class="inline" style="    margin-top: 40px;margin-left: 35%;">
+            <center>
+                <h2> បង្កាន់ដៃទទូលប្រាក់ <br>
+                    OFFICIAL RECEIPT
+                </h1>
+            </center>
+        </div>
+    </div>
+<!-- body -->
+    <div class="row">
+
+
+        <div>
+            <div class="inline" >នាម​ និង គោត្តនាម : </div>
+            <div class="inline bold" style="width:300px" >សារី មុន្នីតារា</div>
+
+            <div class="inline"  >Name(Last, First) :</div>
+            <div class="inline bold"> Sary Monydara</div>
+        </div>
+
+        <div>
+            <div class="inline" >ID Number :</div>
+            <div class="inline bold" style="width:200px">123556</div>
+
+            <div class="inline">Sex :</div>
+            <div class="inline bold" style="width:100px">Male</div>
+
+            <div class="inline" >Date Of Birth : </div>
+            <div class="inline bold" style="width:120px">12-12-2014</div>
+
+            <div class="inline">Phone : </div>
+            <div class="inline bold">012 24 12 14</div>
+        </div>
+        <div>
+            <div class="inline" >Degree : </div>
+            <div class="inline bold" style="width:230px">Masster </div>
+
+            <div class="inline">Faculty : </div>
+            <div class="inline bold" style="width:150px"> IT</div>
+
+            <div class="inline">Batch : </div>
+            <div class="inline bold" style="width:80px">01</div>
+
+            <div class="inline">Year : </div>
+            <div class="inline bold">2014-2015</div>
+
+        </div>
+        <div>
+            <div class="inline" >Amount : </div>
+            <div class="inline bold" style="width:225px">USD 12.00</div>
+
+            <div class="inline">Discount : </div>
+            <div class="inline bold" style="width:135px">USD 2.00 </div>
+
+            <div class="inline">Amount Paid : </div>
+            <div class="inline bold">USD 10.00 </div>
+        </div>
+        <div>
+            <div class="inline">Amount In Word : </div>
+            <div class="bold inline"> Ten Dollars Only</div>
+        </div>
+        <div>
+            <div class="inline" >Reciver : </div>
+            <div class="inline bold">...........................................................................................................................................................................</div>
+        </div>
+        <div>
+            <div class="inline" >Remark : </div>
+            <div class="inline bold">...........................................................................................................................................................................</div>
+        </div>
+
+
+
+    </div>
+
+<!-- footer  -->
+<hr>
+    <div style="background-color:darkred; color:white; padding:10px; width:100%;" class="inline " >
+        <div>
+            <div class="inline" style="width:400px"> St.528,Boeung Kok I, ToulKok, Phnom Penh.</div>
+            <div class="inline" style="width:300px"> Phone:(855)23 998 233</div>
+            <div class="inline"> Fax:(855)23 990 699</div>
+        </div>
+        <div>
+            <div class="inline" style="width:400px"> St.173, Toul Svay Prey I, Chamkarmorn, Phnom Penh</div>
+            <div class="inline" style="width:300px"> Phone:(855)23 220 093</div>
+            <div class="inline"><u>E-mail</u> :info_wu@western.edu.kh</div>
+        </div>
+        <div>
+            <div class="inline" style="width:400px"> St.73,Pheah Ang Eng Street, Kampong Cham Town.</div>
+            <div class="inline" style="width:300px"> Phone:(855)42 942 024</div>
+            <div class="inline"><u>Website</u> :www.western.edu.kh</div>
+        </div>
+    </div>
+</div>
+
+
+<div style="margin-top:140px;width:100%; display:inline-block;">
+
+<!-- header -->
+    <div>
+        <div class="fix"  style="width:400px">
+            <div class="fix" style="">
+                  <% if request.env["REQUEST_PATH"] && request.env["REQUEST_PATH"].include?(".pdf") %>
+                      <img src= "<%= Rails.root %>/public/resources/images/icons/logo.png" style="width: 100px;height:120px" />
+                     <% end %>
+               <!--  <img src="/images/icons/logo" width="100px" height="100px"> -->
+            </div>
+            <div class="fix" style="left:120px; font-family: serif;">
+               <b> មជ្ឈមណ្ឌលបណ្ដូះបណ្ដាលវេស្ទើន<br>
+                WESTERN TRAINING CENTER</b>
+            </div>
+        </div>
+        <div class="fix" style="border: 1px solid black; right: 195px;  padding:5px ">
+            ប្រាក់បង់រូចមិនអាចបង់វិញបាន <br>
+            <b>Nonrefundable</b>
+        </div>
+        <div class="border fix" style="border-radius:5px; right:0px; padding:10px">
+            No.: OR  0001223 <br>
+            Date: 12 / 12 / 2015
+        </div>
+        <div class="inline" style="    margin-top: 50px;margin-left: 35%;">
+            <center>
+                <h2> បង្កាន់ដៃទទូលប្រាក់ <br>
+                    OFFICIAL RECEIPT
+                </h1>
+            </center>
+        </div>
+    </div>
+<!-- body -->
+    <div class="row">
+
+
+        <div>
+            <div class="inline" >នាម​ និង គោត្តនាម : </div>
+            <div class="inline bold" style="width:300px" >សារី មុន្នីតារា</div>
+
+            <div class="inline"  >Name(Last, First) :</div>
+            <div class="inline bold"> Sary Monydara</div>
+        </div>
+
+        <div>
+            <div class="inline" >ID Number :</div>
+            <div class="inline bold" style="width:200px">123556</div>
+
+            <div class="inline">Sex :</div>
+            <div class="inline bold" style="width:100px">Male</div>
+
+            <div class="inline" >Date Of Birth : </div>
+            <div class="inline bold" style="width:120px">12-12-2014</div>
+
+            <div class="inline">Phone : </div>
+            <div class="inline bold">012 24 12 14</div>
+        </div>
+        <div>
+            <div class="inline" >Degree : </div>
+            <div class="inline bold" style="width:230px">Masster </div>
+
+            <div class="inline">Faculty : </div>
+            <div class="inline bold" style="width:150px"> IT</div>
+
+            <div class="inline">Batch : </div>
+            <div class="inline bold" style="width:80px">01</div>
+
+            <div class="inline">Year : </div>
+            <div class="inline bold">2014-2015</div>
+
+        </div>
+        <div>
+            <div class="inline" >Amount : </div>
+            <div class="inline bold" style="width:225px">USD 12.00</div>
+
+            <div class="inline">Discount : </div>
+            <div class="inline bold" style="width:135px">USD 2.00 </div>
+
+            <div class="inline">Amount Paid : </div>
+            <div class="inline bold">USD 10.00 </div>
+        </div>
+        <div>
+            <div class="inline">Amount In Word : </div>
+            <div class="bold inline"> Ten Dollars Only</div>
+        </div>
+        <div>
+            <div class="inline" >Reciver : </div>
+            <div class="inline bold">...........................................................................................................................................................................</div>
+        </div>
+        <div>
+            <div class="inline" >Remark : </div>
+            <div class="inline bold"> ...........................................................................................................................................................................</div>
+        </div>
+
+
+
+    </div>
+
+<!-- footer  -->
+<hr>
+    <div style="background-color:darkred; color:white; padding:10px; width:100%" class="inline " >
+        <div>
+            <div class="inline" style="width:400px"> St.528,Boeung Kok I, ToulKok, Phnom Penh.</div>
+            <div class="inline" style="width:300px"> Phone:(855)23 998 233</div>
+            <div class="inline"> Fax:(855)23 990 699</div>
+        </div>
+        <div>
+            <div class="inline" style="width:400px"> St.173, Toul Svay Prey I, Chamkarmorn, Phnom Penh</div>
+            <div class="inline" style="width:300px"> Phone:(855)23 220 093</div>
+            <div class="inline"><u>E-mail</u> :info_wu@western.edu.kh</div>
+        </div>
+        <div>
+            <div class="inline" style="width:400px"> St.73,Pheah Ang Eng Street, Kampong Cham Town.</div>
+            <div class="inline" style="width:300px"> Phone:(855)42 942 024</div>
+            <div class="inline"><u>Website</u> :www.western.edu.kh</div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

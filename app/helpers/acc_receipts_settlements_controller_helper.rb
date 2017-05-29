@@ -1,0 +1,2 @@
+module AccReceiptsSettlementsControllerHelper
+end

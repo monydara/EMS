@@ -1,0 +1,2 @@
+class AccReceiptsSettlementsController < ApplicationController
+end

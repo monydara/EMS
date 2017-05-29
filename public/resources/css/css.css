@@ -1,0 +1,17 @@
+.labelPayment{	
+	color:black;
+	font-weight:bold
+}
+.x-action-col-icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+}
+.topBarSave{
+	background:rgb(104, 179, 86);
+	border-bottom: solid 2px #EEE;
+	padding: 3px 0;
+	text-align: center;
+	font-weight:bold;	
+	color:white;
+}

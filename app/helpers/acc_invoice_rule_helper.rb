@@ -1,0 +1,2 @@
+module AccInvoiceRuleHelper
+end

@@ -1,0 +1,2 @@
+module AcdCourseHelper
+end
