@@ -1,10 +1,10 @@
 class SdnStudentController < ApplicationController
 	@@image_url =""
 	@@common =CommonFunction.new
-	
+
 
 	def index
-		data = SdnStudent		
+		data = SdnStudent
 		if !params[:string].nil?
 			string = "%"+params[:string]+"%"
 
@@ -18,39 +18,23 @@ class SdnStudentController < ApplicationController
 		end
 		@conditon_string = SdnStudentHelper.get_string_advance_search params
 		data = data.where(" sdn_students.campus_id = #{session[:campus_id]} #{@conditon_string}")
-		
-		result = data.select("  sdn_students.* , sdn_city_states.city_name ,
-				sdn_student_khrs.student_id,
-				sdn_student_khrs.gender gender_khr,
-				sdn_student_khrs.date_of_birth date_of_birth_khr,
-				sdn_student_khrs.place_of_birth,
-				sdn_student_khrs.address address_khr,
-				sdn_student_khrs.phone,
-				sdn_student_khrs.diploma_year,
-				sdn_student_khrs.diploma_grade,
-				sdn_student_khrs.total_score,
-				sdn_student_khrs.is_passed_diploma,
-				sdn_student_khrs.diploma_num,
-				sdn_student_khrs.certificate,
-				sdn_student_khrs.institue,
-				sdn_student_khrs.institue_city,
-				sdn_student_khrs.city,
-				sdn_student_khrs.father_name,
-				sdn_student_khrs.mother_name,
-				sdn_student_khrs.occupation
 
-			").joins(" left join sdn_city_states on sdn_city_states.id = sdn_students.from_city_id
-				left join sdn_admissions on sdn_admissions.student_id = sdn_students.id
-				left join sdn_student_khrs on sdn_student_khrs.student_id = sdn_students.id
+		result = data.select("  sdn_students.*
+
+
 			")
+			# .joins(" left join sdn_city_states on sdn_city_states.id = sdn_students.from_city_id
+			# 	left join sdn_admissions on sdn_admissions.student_id = sdn_students.id
+			# 	left join sdn_student_khrs on sdn_student_khrs.student_id = sdn_students.id
+			# ")
 		render @@common.returnJoinPaginate(  data, result, params[:page],params[:limit])
 	end
-	def get_student 
+	def get_student
 		id = params[:student_id]
 		if !id.nil?
-			@data = SdnStudent.find id 
+			@data = SdnStudent.find id
 			render json:{ data:@data , success:true }
-		else 
+		else
 			render json:{ success:false , message:"Cannot find student without id  "}
 		end
 
@@ -71,8 +55,6 @@ class SdnStudentController < ApplicationController
       end
 
 	end
-
-
 
 	def create
 		@service = SdnStudent::Admission.new
@@ -149,9 +131,9 @@ class SdnStudentController < ApplicationController
 				admission.admission_by_id = session[:user_id]
 				admission.c_level_id = admission.s_level_id
 				admission.status ="N"
-				if @service.is_admission_duplicate(admission) == false 
+				if @service.is_admission_duplicate(admission) == false
 					admission.save
-				else 
+				else
 					render json:{ success:false , message:'Admission already exist. Please re-check admission info'}
 					raise ActiveRecord::Rollback
 					return 0
@@ -210,23 +192,25 @@ class SdnStudentController < ApplicationController
 				studentInfo.update_attributes(permit_data_student)
 				# contact information
 				emergencyContact = SdnContact.find_by student_id:studentInfo.id, contact_type:"E"
-
-				emergencyContact = emergencyContact.update_attributes(permit_data_emergency_contact)
+				if !emergencyContact.nil?
+						emergencyContact = emergencyContact.update_attributes(permit_data_emergency_contact)
+				end
 
 				fatherContact = SdnContact.find_by student_id:studentInfo.id , contact_type:"F"
-				fatherContact.update_attributes(permit_data_father_contact)
+				if !fatherContact.nil?
+					fatherContact.update_attributes(permit_data_father_contact)
+				end
 
 				motherContact = SdnContact.find_by student_id:studentInfo.id , contact_type:"M"
-				motherContact.update_attributes(permit_data_mother_contact)
-
-
+				if !motherContact.nil?
+					motherContact.update_attributes(permit_data_mother_contact)
+				end
 
 				# feeCharge = SdnFeeCharge.find_by student_id:student_id
 				# feeCharge.update_attributes(permit_data_fee_charge)
 				if params[:data]["type"].to_s == "WU"
 						dataStudent = SdnStudentKhr.find_by student_id:studentInfo.id
 						dataStudent.update_attributes(data_permit_student_khr)
-
 				end
 
 				SdnDocument.where(tmp_emp_id:session[:user_id]).update_all(student_id:studentInfo.id, tmp_emp_id:nil)
@@ -237,6 +221,7 @@ class SdnStudentController < ApplicationController
 				render json:{ id:student_id , success:true}
 			end
 		rescue Exception => e
+
 			render json:{message:e.message , success:false}
 		end
 	end

@@ -23,7 +23,7 @@ Ext.define('ExtDesktop.controller.Student', {
         "Nationality",
         "Langauge",
         "sdn.Document",
-        "Ethnicity", 
+        "Ethnicity",
         "sdn.DropType",
         "sdn.SuspendType"
 
@@ -37,9 +37,11 @@ Ext.define('ExtDesktop.controller.Student', {
         'module.student.FrmPersonal',
         'module.student.FmFamilyContact',
         'module.student.FmEmergencyContact',
+        'module.student.GridDocument',
         'module.admissionWU.FmAdditional',
         'module.student.WinAdmissionDetail',
-        'module.student.WinAdmissionTCDetail'
+        'module.student.WinAdmissionTCDetail',
+
     ],
 
     init: function(application) {
@@ -450,7 +452,7 @@ Ext.define('ExtDesktop.controller.Student', {
         btn.up('window').close();
     },
     showFormStudent: function(grid, index) {
-           
+
         var store = grid.getStore();
         var record = store.getAt(index);
         this.showFormStudentWithLock(record, true);
@@ -492,20 +494,28 @@ Ext.define('ExtDesktop.controller.Student', {
         //5- load admission store
         this.admissionStore = win.down("FmAcademic").getStore();
        // this.admissionStore.proxy.extraParams.student_id =  ;
-  
+
         this.admissionStore.load({
         	params:{
-        		student_id: record.get("id"), 
+        		student_id: record.get("id"),
                 type:''
         	}
         });
+
 
         // 6- load khr form
         var fmAdditional = win.down("form[name=admissionWuFmAdditional]");
         fmAdditional.getForm().loadRecord(record);
         // win.down("FmAdditional").down("datefield[name=date_of_birth]").setValue(record.get("date_of_birth_khr"))
        fmAdditional.down("textarea[name=address]").setValue(record.get("address_khr"))
-        fmAdditional.down("radio[name=gender]").setValue(record.get("gender_khr"))
+        fmAdditional.down("radio[name=gender]").setValue(record.get("gender_khr"));
+
+        // 7-  load document Store
+        this.getSdnDocumentStore().load({
+          params:{
+            student_id: record.get("id")
+          }
+        })
 
     },
     showFormStudentAdvanceSearch: function() {

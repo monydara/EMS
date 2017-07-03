@@ -79,7 +79,7 @@ Ext.define('ExtDesktop.view.module.studentDetail.WinAdmissionWU', {
         var grid = {
             xtype: 'grid',
             title: 'Document',
-          
+
             store: 'sdn.Document',
             columns: [{
                 header: 'No',
@@ -317,7 +317,7 @@ Ext.define('ExtDesktop.view.module.studentDetail.WinAdmissionWU', {
                         width: 350
                     },
                     items: [{
-                            
+
                             fieldLabel: 'First Name(<font color="red">*</font>)',
                             allowBlank: false,
                             name: 'first_name',

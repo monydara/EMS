@@ -38,7 +38,7 @@ Ext.define('ExtDesktop.view.module.studentDetail.WinAdmission', {
                 title: 'Contact',
                 items: [{
                   xtype: 'tabpanel',
-                  // height:260,                                                    
+                  // height:260,
                   items: [{
                     xtype: 'FmEmergency',
                     border: true,
@@ -532,7 +532,7 @@ Ext.define('ExtDesktop.view.module.studentDetail.WinAdmission', {
         xtype: 'textfield',
         name: 'note',
         fieldLabel: 'Note',
-        // width:810 , 
+        // width:810 ,
 
       }]
     };

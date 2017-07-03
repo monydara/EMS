@@ -160,7 +160,7 @@ Ext.define('ExtDesktop.view.module.admission.WinAdmission', {
 					}, {
 						xtype: 'textfield',
 						width: 350,
-						fieldLabel: 'Phone No.',
+						fieldLabel: 'Phone No.'+redStar,
 						allowBlank: false,
 						name: 'phone_no'
 					}, {
@@ -304,20 +304,20 @@ Ext.define('ExtDesktop.view.module.admission.WinAdmission', {
 				items: [
                     {
 
-                        fieldLabel: 'គោត្តនាម',
+                        fieldLabel: 'គោត្តនាម'+redStar,
                         allowBlank: false,
                         name: 'khr_first_name'
 
 
                 }, {
                         xtype: 'textfield',
-                        fieldLabel: 'នាម',
+                        fieldLabel: 'នាម'+redStar,
                         allowBlank: false,
                         name: 'khr_last_name'
 
                 }, {
                         xtype: 'textfield',
-                        fieldLabel: 'Last Name',
+                        fieldLabel: 'Last Name'+redStar,
                         allowBlank: false,
                         name: 'last_name'
 				}, {
@@ -329,7 +329,7 @@ Ext.define('ExtDesktop.view.module.admission.WinAdmission', {
 					items: [{
 						labelStyle: 'margin-left:10px',
 						xtype: 'textfield',
-						fieldLabel: 'First Name',
+						fieldLabel: 'First Name'+redStar,
 						allowBlank: false,
 						name: 'first_name',
 						width: 310
@@ -364,7 +364,7 @@ Ext.define('ExtDesktop.view.module.admission.WinAdmission', {
 					})
 				}, {
 					xtype: 'datefield',
-					fieldLabel: 'Date of Birth',
+					fieldLabel: 'Date of Birth'+redStar,
 					name: 'date_of_birth',
 					format: 'd-M-Y',
 					submitFormat: 'Y-m-d',

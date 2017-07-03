@@ -7,7 +7,7 @@ Ext.define('ExtDesktop.view.module.student.WinStudent', {
     modal: true,
     autoScroll: true,
     initComponent: function() {
-         // Ext.MessageBox.hide();  
+         // Ext.MessageBox.hide();
         var me = this;
         var lock = this.lock;
         Ext.applyIf(me, {
@@ -44,7 +44,7 @@ Ext.define('ExtDesktop.view.module.student.WinStudent', {
                         items:[
                             Ext.create("ExtDesktop.view.module.student.FrmBasicInfo" , { lock:lock})
 /*                            {
-                                xtype:'FmBasic', 
+                                xtype:'FmBasic',
                                 lock: lock
                             }*/,{
                                 xtype:'tabpanel',
@@ -52,16 +52,16 @@ Ext.define('ExtDesktop.view.module.student.WinStudent', {
                                 items:[
                                     Ext.create("ExtDesktop.view.module.student.FrmPersonal", { lock : lock })
                                    /* {
-                                        xtype:'FmPersonal', 
-                                        lock : lock 
+                                        xtype:'FmPersonal',
+                                        lock : lock
                                     }*/,{
                                         xtype:'FmAcademic'
                                     }, {
                                         xtype: 'panel',
                                         title: 'Accounting'
                                     }, {
-                                        xtype: 'panel',
-                                        title: 'Document'
+                                        xtype: 'gridDocument',
+                                        // title: 'Document'
                                     },
                                     Ext.create("ExtDesktop.view.module.admissionWU.FmAdditional",{ lock : lock})
                                     /* {
