@@ -41,7 +41,7 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
-
+  config.logger = Logger.new('log/Ems.log', 'daily')
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
