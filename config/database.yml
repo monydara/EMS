@@ -14,19 +14,19 @@ development:
   <<: *default
   database: ems
   username: root
-  password: 
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ems_western 
+  database: ems_western
   username: root
-  password: 
+  password:
 
 production:
   <<: *default
   username: root
-  password: 
-  database: emsProduct
+  password:
+  database: ems

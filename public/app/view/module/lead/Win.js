@@ -17,13 +17,13 @@ Ext.define('ExtDesktop.view.module.lead.Win',{
             items:[
                 {
                     fieldLabel:"នាមត្រកូល",
-                    name:'khr_last_name',
+                    name:'khr_first_name',
                     allowBlank:true,
                     maxLength: 50
                 },{
                   xtype:'form',
                  layout:'hbox',
-                 rowspan:4,       
+                 rowspan:4,
                  height:140,
                  items:[
                     {
@@ -49,7 +49,7 @@ Ext.define('ExtDesktop.view.module.lead.Win',{
                     }]
                 },{
                     fieldLabel:'នាម',
-                    name:'khr_first_name',
+                    name:'khr_last_name',
                     allowBlank:true,
                     maxLength: 50
                 },{

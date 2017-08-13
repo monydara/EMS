@@ -4,6 +4,9 @@ class SdnStudentController < ApplicationController
 
 
 	def index
+		
+
+		puts "======= test"
 		data = SdnStudent
 		if !params[:string].nil?
 			string = "%"+params[:string]+"%"

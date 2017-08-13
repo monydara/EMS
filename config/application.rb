@@ -20,10 +20,18 @@ module Admin
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Enable stdout logger
+  #  config.logger = Logger.new(STDOUT)
+
+    # Set log level
+    #config.log_level = :ERROR
+
     # auto load service folder
      require 'pdfkit'
     config.middleware.use PDFKit::Middleware , :print_media_type => true
     config.autoload_paths += Dir[Rails.root.join('app', 'service', '{**/}')]
+
+    config.secret_key_base = 'blipblapblup'
 
   end
 end

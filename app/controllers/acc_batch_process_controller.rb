@@ -16,6 +16,7 @@ class AccBatchProcessController < ApplicationController
 				render json:{ success:false , message:@data.errors.full_messages.first}
 			end
 		rescue Exception => e
+			Rails.
 			render json:{ success:false , message:e.message}
 		end
 	end
