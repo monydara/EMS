@@ -1,0 +1,12 @@
+
+tmp/pids/server.pid
+
+log/Ems.log
+
+Ems.log
+
+log/development.log
+
+log/production.log
+
+log/development.log

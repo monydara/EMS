@@ -4,7 +4,7 @@ class SdnStudentController < ApplicationController
 
 
 	def index
-		
+
 
 		puts "======= test"
 		data = SdnStudent
@@ -79,8 +79,11 @@ class SdnStudentController < ApplicationController
 	        studentInfo.save
 	      else
 	      	puts "========== student the same lead #{studentInfo.lead_id.nil?}"
-	     	data=SdnStudent.find_by lead_id:studentInfo.lead_id
-	        studentInfo = SdnStudent.find data.id
+     			@LeadData=SdnStudent.find_by lead_id:studentInfo.lead_id
+					if !@LeadData.nil? 
+						studentInfo = SdnStudent.find data.id
+					end
+
 	        studentInfo.update_attributes(permit_data_student)
 	      end
 
