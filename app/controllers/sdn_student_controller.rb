@@ -81,7 +81,7 @@ class SdnStudentController < ApplicationController
 	      	puts "========== student the same lead #{studentInfo.lead_id.nil?}"
      			@LeadData=SdnStudent.find_by lead_id:studentInfo.lead_id
 					if !@LeadData.nil?
-						studentInfo = SdnStudent.find data.
+						studentInfo = SdnStudent.find data.lead_id
 						studentInfo.update_attributes(permit_data_student)
 					else
 						studentInfo.status = "N"
