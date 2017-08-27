@@ -111,8 +111,10 @@ Ext.define('ExtDesktop.view.module.student.FrmBasicInfo', {
                                         xtype: 'textarea',
                                         fieldLabel: 'Place of Birth',
                                         name: 'place_of_birth',
-                                        width: 645,
-                                        colspan: 2
+                                }, {
+                                        xtype: 'textarea',
+                                        fieldLabel: 'Note',
+                                        name: 'note',
                                 }]
                  }
         return form;
@@ -126,7 +128,7 @@ Ext.define('ExtDesktop.view.module.student.FrmBasicInfo', {
                     Ext.create('Ext.Img', {
                         width: 180,
                         height:180,
-                        
+
                         style: 'margin-left:20px',
                         src: 'resources/images/photo/no-picture.gif'
                     }),{

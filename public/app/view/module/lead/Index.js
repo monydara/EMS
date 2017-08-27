@@ -104,14 +104,16 @@ Ext.define('ExtDesktop.view.module.lead.Index',{
                                 var degree = rec.get("degree"),
                                     course = rec.get("course"),
                                     classShift = rec.get("class_shift"),
-                                    note = rec.get("note")
+                                    note = rec.get("note"),
+                                    updateDate= rec.get("updated_at")
                                     ;
                                 var html =
                                             "<div style='padding-bottom:5px'><b> Degree : </b>"+degree+"</div>"+
                                             "<div style='padding-bottom:5px'><b>Course : </b>"+course +"</div>"+
                                             "<div style='padding-bottom:5px'><b>Class Shift : </b>"+classShift+"</div>"+
                                             "<div style='padding-bottom:5px'><b>Student No : </b>"+rec.get('student_no') +"</div>"+
-                                            "<div style='padding-bottom:5px'><b>Note : </b>"+note +"</div>"
+                                            "<div style='padding-bottom:5px'><b>Note : </b>"+note +"</div>"+
+                                            "<div style='padding-bottom:5px'><b>Last Updated : </b>"+updateDate +"</div>"
 
                                             ;
 

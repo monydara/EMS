@@ -59,11 +59,19 @@ Ext.define('ExtDesktop.controller.Student', {
             "studentGrid button[action=Add]": {
                 click: this.showFormStudent
             },
+            // ==== action in advance search
             "winAdvanceSearch button[action=Close]": {
                 click: this.closeWindow
             },
+
             "winAdvanceSearch button[action=Search]": {
                 click: this.advanceSearch
+            },
+            'winAdvanceSearch combo[name=degree_id]':{
+                change: this.filterCourse
+            },
+            'winAdvanceSearch combo[name=course_id]':{
+                change: this.filterMajor
             },
             //==== student form
             'winStudent filefield': {
@@ -119,6 +127,37 @@ Ext.define('ExtDesktop.controller.Student', {
         });
     },
     admissionStore : null ,
+    filterMajor: function(field, value) {
+
+        // var store = this.getComboMajorStore();
+        // store.load({
+        //     params: {
+        //         course_id: value
+        //     }
+        // });
+        var course_id = field.getValue();
+        var comboMajor = field.up('window').down('combo[name=major_id]');
+
+        comboMajor.store.proxy.extraParams.course_id = course_id;
+
+        comboMajor.store.load();
+        comboMajor.setValue('');
+
+    },
+    filterCourse: function(field, obj) {
+
+        var degree_id = field.getValue();
+        var degree_type = field.getStore().getById(obj).get("degree_type");
+
+        var comboCourse = field.up('window').down('combo[name=course_id]');
+
+        comboCourse.store.proxy.extraParams.degree_id = degree_id;
+        comboCourse.store.proxy.extraParams.type = degree_type;
+
+        comboCourse.store.load();
+        comboCourse.setValue('');
+    },
+
     unlockAmsTC:function(btn){
         var win = btn.up("window");
         var rec = win.down("form").getRecord();

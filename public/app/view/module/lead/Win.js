@@ -15,12 +15,12 @@ Ext.define('ExtDesktop.view.module.lead.Win',{
             },
 
             items:[
-                {
-                    fieldLabel:"នាមត្រកូល",
-                    name:'khr_first_name',
-                    allowBlank:true,
-                    maxLength: 50
-                },{
+              {
+                  fieldLabel:'Last Name',
+                  allowBlank:false,
+                  name:'last_name',
+                  maxLength: 50
+              },{
                   xtype:'form',
                  layout:'hbox',
                  rowspan:4,
@@ -48,19 +48,19 @@ Ext.define('ExtDesktop.view.module.lead.Win',{
                         name: 'image_url'
                     }]
                 },{
-                    fieldLabel:'នាម',
-                    name:'khr_last_name',
-                    allowBlank:true,
-                    maxLength: 50
-                },{
-                    fieldLabel:'Last Name',
-                    allowBlank:false,
-                    name:'last_name',
-                    maxLength: 50
-                },{
                     fieldLabel:'First Name',
                     allowBlank:false,
                     name:'first_name',
+                    maxLength: 50
+                },{
+                      fieldLabel:"នាមត្រកូល",
+                      name:'khr_first_name',
+                      allowBlank:true,
+                      maxLength: 50
+                  },{
+                    fieldLabel:'នាម',
+                    name:'khr_last_name',
+                    allowBlank:true,
                     maxLength: 50
                 },{
                     xtype:'container',

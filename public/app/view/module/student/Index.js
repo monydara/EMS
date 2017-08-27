@@ -154,8 +154,8 @@ Ext.define('ExtDesktop.view.module.student.Index', {
                     dataIndex: 'phone_no',
                     width: 100
                 }, {
-                    header: 'Address',
-                    dataIndex: 'address',
+                    header: 'Note',
+                    dataIndex: 'note',
                     flex: 1
                 }, {
                     header: 'City',
@@ -189,9 +189,9 @@ Ext.define('ExtDesktop.view.module.student.Index', {
                             xtype:'button',
                             text:'View',
                             iconCls:'icon-view',
-                            tooltip: 'Student Detail', 
-                            handler:function(grid , rowIndex){      
-                                     
+                            tooltip: 'Student Detail',
+                            handler:function(grid , rowIndex){
+
                                 var ctrl = ExtDesktop.app.getController("Student");
                                  // Ext.MessageBox.wait("Please wait system processing data.....","System Processing");
                                 ctrl.showFormStudent(grid , rowIndex );

@@ -21,15 +21,18 @@ class SdnStudentController < ApplicationController
 		end
 		@conditon_string = SdnStudentHelper.get_string_advance_search params
 		data = data.where(" sdn_students.campus_id = #{session[:campus_id]} #{@conditon_string}")
+# ---- if have advance search we will join with other table , 
+		if @conditon_string != ""
+			data= data.joins(" left join sdn_city_states on sdn_city_states.id = sdn_students.from_city_id
+					left join sdn_admissions on sdn_admissions.student_id = sdn_students.id
+					left join sdn_student_khrs on sdn_student_khrs.student_id = sdn_students.id
+				")
+		end
+
 
 		result = data.select("  sdn_students.*
-
-
 			")
-			# .joins(" left join sdn_city_states on sdn_city_states.id = sdn_students.from_city_id
-			# 	left join sdn_admissions on sdn_admissions.student_id = sdn_students.id
-			# 	left join sdn_student_khrs on sdn_student_khrs.student_id = sdn_students.id
-			# ")
+
 		render @@common.returnJoinPaginate(  data, result, params[:page],params[:limit])
 	end
 	def get_student
