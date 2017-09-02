@@ -93,7 +93,7 @@ Ext.define('ExtDesktop.controller.Campus', {
     	var fileName='ExtDesktop.view.module.campus.WinCampus';
     	var win=Ext.create(fileName);
     		console.log(win);
-    		win.down('textfield[name=code]').setReadOnly(true);
+    		win.down('textfield[name=campus_code]').setReadOnly(true);
     	Util.selectGrid(btn,fileName,'Please select campus from list!');
     },
     closeCampus:function(field,value){
@@ -103,7 +103,7 @@ Ext.define('ExtDesktop.controller.Campus', {
         var row =grid.getSelectionModel().getSelection();
         if(row.length){
         	var record=row[0];
-        	var campusId=record.data.campusId;
+        	var campusId=record.data.id;
         	Ext.Msg.show({
                 title : 'Close',
                 msg : 'Do you want to close this campus?',
@@ -118,7 +118,7 @@ Ext.define('ExtDesktop.controller.Campus', {
                 multiline : false,
                 fn : function(buttonValue, inputText, showConfig){
     	            	if(buttonValue=='yes'){
-    	            		Util.ajax('campus/close.action',{campusId:campusId},me.closeCampusSuccess,store);
+    	            		Util.ajax('GenCampus/update_status',{campus_id:campusId, status:0},me.closeCampusSuccess,store);
     	            	}
                 },
                 icon : Ext.Msg.QUESTION
@@ -147,7 +147,7 @@ Ext.define('ExtDesktop.controller.Campus', {
         var row =grid.getSelectionModel().getSelection();
         if(row.length){
         	var record=row[0];
-        	var campusId=record.data.campusId;
+        	var campusId=record.data.id;
         	Ext.Msg.show({
                 title : 'Close',
                 msg : 'Do you want to re-open this campus?',
@@ -162,7 +162,7 @@ Ext.define('ExtDesktop.controller.Campus', {
                 multiline : false,
                 fn : function(buttonValue, inputText, showConfig){
     	            	if(buttonValue=='yes'){
-    	            		Util.ajax('campus/open.action',{campusId:campusId},me.openCampusSuccess,store);
+    	            		Util.ajax('GenCampus/update_status',{campus_id:campusId , status:1},me.openCampusSuccess,store);
     	            	}
                 },
                 icon : Ext.Msg.QUESTION

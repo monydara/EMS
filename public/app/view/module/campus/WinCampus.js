@@ -10,7 +10,7 @@ Ext.define('ExtDesktop.view.module.campus.WinCampus', {
 	width:500,
 	autoShow: false,
 	initComponent: function() {
-	        var me = this;	     
+	        var me = this;
 	        Ext.applyIf(me,{
 					items:[
 				                {
@@ -22,7 +22,7 @@ Ext.define('ExtDesktop.view.module.campus.WinCampus', {
 				                    ]
 				                }],
 					buttons:[
-					        
+
 					         {text:'<b>Save</b>',action:'save',iconCls:'icon-save',formBind:true,type:"submit"},
 					         {text:'<b>Cancel</b>',action:'cancel',iconCls:'icon-delete'}
 					],
@@ -40,8 +40,8 @@ Ext.define('ExtDesktop.view.module.campus.WinCampus', {
 	                        		fieldDefaults: {labelWidth: 120},
 	                        		items:[
 	                                   		{xtype:'hidden',name:'campusId'},
-	                                   		{xtype: 'textfield',name:'code',fieldLabel:'Campus Code <font style="color:red">*</font>',emptyText:'Campus code...',allowBlank:false},
-	                                   		{xtype: 'textfield',name:'campusName',fieldLabel:'Campus Name <font style="color:red">*</font>',emptyText:'Campus name...',allowBlank:false},
+	                                   		{xtype: 'textfield',name:'campus_code',fieldLabel:'Campus Code <font style="color:red">*</font>',emptyText:'Campus code...',allowBlank:false},
+	                                   		{xtype: 'textfield',name:'campus_name',fieldLabel:'Campus Name <font style="color:red">*</font>',emptyText:'Campus name...',allowBlank:false},
 	                                   	]
 	                        	},{
 	                        		defaults:{width: 420},
@@ -61,9 +61,9 @@ Ext.define('ExtDesktop.view.module.campus.WinCampus', {
 												          {xtype: 'label',width: 60,margin: '5px 0 0 5px',text:'(2 digits)'}]
 	                                   	    }]
 	                        	}
-	                        
+
 	                        ]
-	                 
+
 			}
 		return info;
 	},
@@ -81,20 +81,20 @@ Ext.define('ExtDesktop.view.module.campus.WinCampus', {
 										emptyText:'Phone ... ',
 										fieldLabel:'Phone'
 									},{
-										
+
 										xtype: 'textfield',
 										name :'email',
 										emptyText:'Email ... ',
 										fieldLabel:'Email'
 									},{
-					               		margin:'5px 0 0 0',
-					               		xtype:'textarea',	
-					               		name:'address',
-					               		fieldLabel:'Address'
-					               	}]
+		               		margin:'5px 0 0 0',
+		               		xtype:'textarea',
+		               		name:'address',
+		               		fieldLabel:'Address'
+		               	}
+								]
 			}
 			return contact
 	}
 
 });
-

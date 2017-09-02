@@ -1,7 +1,7 @@
 Ext.define('ExtDesktop.model.Campus', {
     extend: 'Ext.data.Model',
     fields: [
-                	"id" , 
+          "id" , 
 					"campus_code",
 					"campus_name",
 					"abbr",
